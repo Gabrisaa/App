@@ -1,8 +1,10 @@
 import { View, Text, Image } from 'react-native'
+import { Botaozinho } from "../../components/botaozinho"
 import { styles } from './styles'
+import { IPage } from '../../../App'
 
 
-export function Slide1() {
+export function Slide1({Ipage, IsetPage} : IPage) {
   const bolinho = require("../../assets/bolo.png")
   const planilha = require("../../assets/listinha.png")
   const dinheiro = require("../../assets/dinheiro.png")
@@ -27,9 +29,7 @@ export function Slide1() {
           <Text> e questões financeiras </Text>
         </View>
       <View style={styles.baixo} >
-            <Image  source={cinza} />
-            <Image source={coracao} />
-            <Image source={coracao} />
+        <Botaozinho  Ipage={Ipage} IsetPage={IsetPage}/>           
       </View>
     </View>
     </View>
